@@ -65,6 +65,38 @@
 
 
 
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     /*
+//     for n=3;
+
+//       A B C
+//       A B C
+//       A B C
+//     */
+
+//     int n;
+//     cin >> n;
+//     int i = 1;
+//     while(i <= n)
+//     {
+//         int j = 1;
+//         while (j <= n)
+//         {
+//             char ch='A'+j-1;
+//             cout <<ch<< " ";
+//             j++;
+//         }
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+
 #include <iostream>
 using namespace std;
 
@@ -74,20 +106,22 @@ int main()
     for n=3;
 
       A B C
-      A B C
-      A B C
+      D E F
+      G H I
     */
 
     int n;
     cin >> n;
     int i = 1;
+    char start='A';
     while(i <= n)
     {
         int j = 1;
+        
         while (j <= n)
         {
-            char ch='A'+j-1;
-            cout <<ch<< " ";
+            cout <<start<< " ";
+            start++;
             j++;
         }
         cout << endl;
