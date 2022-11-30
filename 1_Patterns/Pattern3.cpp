@@ -97,6 +97,41 @@
 // }
 
 
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     /*
+//     for n=3;
+
+//       A B C
+//       D E F
+//       G H I
+//     */
+
+//     int n;
+//     cin >> n;
+//     int i = 1;
+//     char start='A';
+//     while(i <= n)
+//     {
+//         int j = 1;
+        
+//         while (j <= n)
+//         {
+//             cout <<start<< " ";
+//             start++;
+//             j++;
+//         }
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+
+
 #include <iostream>
 using namespace std;
 
@@ -106,8 +141,8 @@ int main()
     for n=3;
 
       A B C
-      D E F
-      G H I
+      B C D
+      C D E
     */
 
     int n;
@@ -120,8 +155,9 @@ int main()
         
         while (j <= n)
         {
-            cout <<start<< " ";
-            start++;
+            char ch='A'+i+j-2;
+            cout <<ch<< " ";
+           
             j++;
         }
         cout << endl;
