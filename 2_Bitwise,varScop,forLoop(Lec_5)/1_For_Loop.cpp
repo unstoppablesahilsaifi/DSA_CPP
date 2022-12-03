@@ -141,3 +141,17 @@ int main()
 }
 
 */
+
+
+/********************Find Output good question***************888*/
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    for(int i=0;i<5;i++){
+        for(int j = i;j<=5;j++){
+            cout<<i<<" "<<j<<endl;
+        }
+    }
+}
