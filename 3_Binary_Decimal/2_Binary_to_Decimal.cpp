@@ -1,0 +1,1 @@
+// Convert Binnary into decimal
