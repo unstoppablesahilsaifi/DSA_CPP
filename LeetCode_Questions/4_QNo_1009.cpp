@@ -36,3 +36,21 @@ ab mask hme 0 se initialize kiya  hua tha
 to bhai mask ko left shift  krke OR krdo 1 s
 to 3 baar left shift krne per 0000..00111 aa gya       0 | 0 = 0 baaki sab 1 hoga
 */
+
+
+// class Solution {
+// public:
+//     int bitwiseComplement(int n) {
+//         int m=n;
+//         int mask=0;
+//         if(n==0){
+//             return 1;
+//         }
+//       while(m!=0){
+//           mask=(mask << 1) | 1;
+//           m= m >> 1;
+//       }
+//       int ans= (~n) & mask;
+//       return ans;
+//     }
+// };
