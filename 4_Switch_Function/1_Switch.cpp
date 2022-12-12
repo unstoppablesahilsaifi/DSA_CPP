@@ -35,5 +35,9 @@ int main()
         	amount -= n1 * 1;
         break;
 	}
+    	cout << "100 = " << n100 <<endl;
+    cout << "50 = " << n50 <<endl;
+    cout << "20 = " << n20 <<endl;
+    cout << "1 = " << n1 <<endl;
     return 0;
 }
