@@ -16,6 +16,19 @@ int getMax(int num[], int n)
     return max;
 }
 
+int getMin(int num[], int n)
+{
+    int min = INT_MAX;
+    for (int i = 0; i < n; i++)
+    {
+        if (num[i] < min)
+        {
+            min = num[i];
+        }
+    }
+    return min;
+}
+
 int main()
 {
     int size;
@@ -25,6 +38,8 @@ int main()
     {
         cin >> num[i];
     }
-    cout << "Maximum value is" << getMax(num, size);
+    cout << "Maximum value is" << getMax(num, size)<<endl;
+    cout << "Minimum value is" << getMin(num, size);
+
     return 0;
 }
