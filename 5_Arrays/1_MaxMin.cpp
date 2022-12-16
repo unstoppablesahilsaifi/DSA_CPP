@@ -46,26 +46,55 @@
 
 // Print the sum of the array
 
+// #include <iostream>
+// using namespace std;
+// int sum(int arr[], int n)
+// {
+//     int sum = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         sum = sum + arr[i];
+//     }
+//     return sum;
+// }
+// int main()
+// {
+//     int arr[50];
+//     int n;
+//     cin >> n;
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     cout << "Sum of the array is" << sum(arr, n);
+//     return 0;
+// }
+
+// second approch to check whether the number can be defined in the power of 2 or not.
+
 #include <iostream>
 using namespace std;
-int sum(int arr[], int n)
-{
-    int sum = 0;
-    for (int i = 0; i < n; i++)
-    {
-        sum = sum + arr[i];
-    }
-    return sum;
-}
+
 int main()
 {
-    int arr[50];
     int n;
     cin >> n;
-    for (int i = 0; i < n; i++)
+    int count = 0;
+    while (n != 0)
     {
-        cin >> arr[i];
+        if (n & 1)
+        {
+            count++;
+        }
+        n = n >> 1;
     }
-    cout << "Sum of the array is" << sum(arr, n);
+    if (count == 1)
+    {
+        cout<< "can be defined in the power of two";
+    }
+    else
+    {
+        cout << "can not be defined in the power of 2";
+    }
     return 0;
 }
