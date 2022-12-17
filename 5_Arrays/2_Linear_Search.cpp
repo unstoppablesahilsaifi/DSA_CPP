@@ -1,14 +1,12 @@
 // Linear Search Program in C++
 #include <iostream>
 using namespace std;
-int check(int arr[], int n)
+bool check(int arr[], int n, int v)
 {    
-    int v;
-    cout << "no is to  be checked";
-    cin >> v;
+  
     for (int i = 0; i < n; i++)
     {
-        if (arr[i]==v)
+        if (arr[i] == v)
         {
             return 1;
         }
@@ -22,11 +20,21 @@ int main()
 
     int arr[100];
     int n;
+    int v;
+    
     cin >> n;
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
-    cout<<"No is"<< check(arr,n);
+    cout<< "no is to  be checked";
+    cin >> v;
+    bool found= check(arr,n,v);
+    if(found){
+        cout<<"present";
+    }
+    else{
+        cout<<"Not Present";
+    }
     return 0;
 }
