@@ -38,8 +38,6 @@ int main(){
     cout<<"Enter the Value of A and B"<<endl;
     cin>>a;
     cin>>b;
-    
-
     int answer = BitCounter(a) + BitCounter(b);
     cout<<answer;
 }
