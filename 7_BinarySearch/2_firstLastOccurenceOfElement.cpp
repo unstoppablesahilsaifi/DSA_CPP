@@ -15,7 +15,7 @@ int firstOcc(int arr[], int n, int key)
             e = mid - 1;
         }
         // yha pr hum chize update krrhe hai isliye nested if else nhi bnaya upr wle k sth
-        if (key > arr[mid])
+        else if (key > arr[mid])
         {
             s = mid + 1;
         }
