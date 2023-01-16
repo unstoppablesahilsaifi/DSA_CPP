@@ -27,3 +27,13 @@ currently we have 1111111....011
                   _________________
                   000000.....101  that is 5
                 
+
+***************************************************************************************************
+
+Very Important as we know that integer has 32 bit of range
+ -2^32 -1 se +2^32-1
+
+= koi number h jiski 32 bits hongi or pehli  bit sign ko denote kregi suppose kroo ki 32 bits m ek jagah to pehli bits 0 h baaki bits
+  bhi 0 and dusri jagah pehli bits 1 h baaki bits 0 h to -0 and +0 ka koi mtlb nhi bnta na,
+  mtlb ek number jo ki 0 h usee dikhane k liye hm do representation ka use kr rhe h 
+  to hm range ko -2^32 se +2^32-1 kr skte  h 
