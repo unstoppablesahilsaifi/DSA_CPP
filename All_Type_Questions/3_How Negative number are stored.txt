@@ -1,0 +1,29 @@
+First Bit denote  the sign of the integer
+0 means positiv and 1 means negative value
+
+Lets take and example of -5 that we have to store
+step 1- Ignore the negative sign
+step 2- Convert into binary representation which is 101
+as we know that integer has 32 bit so rest bits would be zero like 0 0 0 0 0 0 0  0...... 1 0 1
+step 3- Take 2's Compliment and store
+
+Note:: I have just random bits used Plz use 32 bits for integer
+
+for innteger 5 =    0000000.....101
+1's compliment =    1111111.....010
+                                 +1
+         Plus 1   _________________
+                    1111111.....011
+
+Ab dekho most left m 1 aa gya it means ki number negative h 
+
+
+-------------------------------------------------------------------------------------------------
+// If we have to print the negative number to bhai uska bhi 2's compliment lena pdega
+
+currently we have 1111111....011
+    1's           0000000....100
+    2's   plus 1              +1
+                  _________________
+                  000000.....101  that is 5
+                
