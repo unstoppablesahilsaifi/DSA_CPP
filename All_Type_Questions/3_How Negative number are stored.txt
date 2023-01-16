@@ -37,3 +37,39 @@ Very Important as we know that integer has 32 bit of range
   bhi 0 and dusri jagah pehli bits 1 h baaki bits 0 h to -0 and +0 ka koi mtlb nhi bnta na,
   mtlb ek number jo ki 0 h usee dikhane k liye hm do representation ka use kr rhe h 
   to hm range ko -2^32 se +2^32-1 kr skte  h 
+
+
+
+****************************************************************************************************
+Signed and unsigned integer.
+signed- +,-
+unsigned- Only positive
+
+agar koi number 3 bit ka h to teeno bit number ko reserver hongi or agar koi number negative h to ek last bit sign le jayga
+000= 0
+001= 1
+010= 2
+011= 3
+100= 4
+101= 5
+110= 6
+111= 7
+ab jaise koi number h 7 jiska binary h 1 1 1 jab hm decimal m krte the convert to (2 ki power 2* 1)+(2 ki power 1 * 1)+(2 ki power 0 *1)
+aise krte the
+
+to unsigned numbr ki range bnegi 0 to (2^n)-1 n bit k liye
+ex- 3 bits h to uper ki equation rkhne per 7 aayga 
+range bnegi 0 to 7
+
+// For signed integer
+000= +0
+001= +1
+010= +2
+011= +3
+100= -0
+101= -1
+110= -2
+111= -3
+
+Range (-2^n-1)+1 to 2^n-1
+agar bit 3 h to range -3 s +3 ki bnegi  
