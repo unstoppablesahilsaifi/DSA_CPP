@@ -15,6 +15,12 @@ int main()
     return 0;
 }
 
+O/P-
+8
+8
+9
+7
+
 */
 
 
@@ -29,12 +35,37 @@ int main()
     //Find output 
     int a, b=1;
     a=10;
-    if (++a) // agar ye if condition 0 hai means false sirf tb ye else pr jayega suppose a = -1 hota aur phir ye 0 toh ye else pr jata
-    cout<<b;
+    if (++a) // agar ye if condition 0 hai means false sirf tb ye else pr jayega, If condition agar exist krti h to, mtlb a hmare paas h
+    cout<<b; // does not matter ki incre ho rha h ya decre per exist to krta h na  that's why if m jayga. 
     else
     cout<< ++b;
     return 0;
 }
+
+OP= 1
+*/
+
+/*
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a=1;
+    int b=2;
+    if(a-- > 0 || ++b > 2){
+        cout<<"Stage 1 Inside if";
+    }
+    else{
+        cout<<"stage 2 inside else";
+    }
+    return 0;
+}
+
+OP= stage 1 inside if
+Note- (2nd Condition does not execute as 1st one is true in OR case) kyuki OR condition m koi bhi ek true honi chahiye jab hme 1st
+      hi true mil gai to 2nd per jane ka mtlb ni bnta na isliye 2nd execute nhi hogi
+
 */
 
   ///////////////////////Print 1 to 5
@@ -67,6 +98,9 @@ int main()
     return 0;
 }
 */
+
+
+
 
 /////Fibonacci series 10 iteration
 /*
@@ -144,6 +178,7 @@ int main()
 
 
 /********************Find Output good question***************888*/
+/*
 #include<iostream>
 using namespace std;
 
@@ -155,3 +190,4 @@ int main()
         }
     }
 }
+*/
