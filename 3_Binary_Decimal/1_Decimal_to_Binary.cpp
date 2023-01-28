@@ -33,3 +33,40 @@ int main()
     cout<<"Answer is= "<<ans<<endl;
     
 }
+
+/*
+#include <iostream>
+using namespace std;
+ 
+// function to convert decimal to binary
+void decToBinary(int n)
+{
+    // array to store binary number
+    int binaryNum[32];
+ 
+    // counter for binary array
+    int i = 0;
+    while (n > 0) {
+ 
+        // storing remainder in binary array
+        binaryNum[i] = n % 2;
+        n = n / 2;
+        i++;
+    }
+     
+    // printing binary array in reverse order, Kyuki convert krte time revresed ho jata h jaise agar 25 ko krenge to convert krke 10011 aayga jabki shi h 11001
+    // isliye reverse krna pdta h
+    for (int j = i - 1; j >= 0; j--)
+        cout << binaryNum[j];
+}
+ 
+// Driver program to test above function
+int main()
+{
+    int n = 17;
+    decToBinary(n);
+    return 0;
+}
+OP- 10001
+// https://www.geeksforgeeks.org/program-decimal-binary-conversion/
+*/
