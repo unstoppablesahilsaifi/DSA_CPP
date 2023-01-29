@@ -16,7 +16,7 @@ to mtlb 00000..0000111 aisa mask bna le or ~n s AND & krde to
 n=5 ->  000000..000101
 
 ~n ->   111111..111010
-mask-> &111111..111111    (1 ka & kiya h)
+mask-> &000000..000111    (1 ka & kiya h)
 ans ->  000000.0000010  -> 2
 
 to abhi tak formula ye h ki ~n k sath & krado mask ko
