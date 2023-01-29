@@ -1,4 +1,4 @@
-/* 
+/*
 Jab ham kisi number ko AND & krte h 1 k sath or agar anser 1 aa jaye to Odd number h else even number h.
 Lets do this for 5
 5 in binary- 1 0 1 or isme hm AND & 1 krte h to 1 0 1 aayga iska mtlb last bit 1 h to number odd hua
@@ -14,52 +14,52 @@ agar kisi number ki bit nikalni h to use 1 ka AND & krdo agar last bit 0 aaye to
 // Convert decimal to binary
 // ans = (digit*10^i)+ ans
 
-#include<iostream>
+#include <iostream>
 using namespace std;
-#include<math.h>
+#include <math.h>
 
 int main()
 {
     int n;
-    cin>>n;
-    int ans=0;
-    int i=0;
-    while(n!=0){
-        int bit=n&1;
-        ans=(bit * pow(10,i)) + ans;
-        n=n >> 1;
+    cin >> n;
+    int ans = 0;
+    int i = 0;
+    while (n != 0)
+    {
+        int bit = n & 1;
+        ans = (bit * pow(10, i)) + ans;
+        n = n >> 1;
         i++;
     }
-    cout<<"Answer is= "<<ans<<endl;
-    
+    cout << "Answer is= " << ans << endl;
 }
 
 /*
 #include <iostream>
 using namespace std;
- 
+
 // function to convert decimal to binary
 void decToBinary(int n)
 {
     // array to store binary number
     int binaryNum[32];
- 
+
     // counter for binary array
     int i = 0;
     while (n > 0) {
- 
+
         // storing remainder in binary array
         binaryNum[i] = n % 2;
         n = n / 2;
         i++;
     }
-     
+
     // printing binary array in reverse order, Kyuki convert krte time revresed ho jata h jaise agar 25 ko krenge to convert krke 10011 aayga jabki shi h 11001
     // isliye reverse krna pdta h
     for (int j = i - 1; j >= 0; j--)
         cout << binaryNum[j];
 }
- 
+
 // Driver program to test above function
 int main()
 {
@@ -69,4 +69,45 @@ int main()
 }
 OP- 10001
 // https://www.geeksforgeeks.org/program-decimal-binary-conversion/
+*/
+
+// Negative number to binary
+
+/*
+#include<iostream>
+#include <math.h>
+using namespace std;
+
+int decimalToBinary(int n){
+    int ans = 0;
+    int i = 0;
+    while(n!=0){
+        int bit = n&1;
+        ans = (bit * pow(10,i)) + ans;
+        n = n >> 1;
+        i++;
+    }
+    return ans;
+}
+int main(){
+    int n;
+    cin >> n;
+
+    if(n<0){
+        // if number is negative
+        n = n*(-1);
+        int ans = decimalToBinary(n);
+    // Find 2's compliment of the number
+    // 1's comp
+    int newAns = (~ans);
+    // 2's comp
+    newAns = newAns+1;
+    cout << newAns << endl;
+
+    } else {
+        // if number is positive
+        int ans = decimalToBinary(n);
+        cout << ans << endl;
+    }
+}
 */
