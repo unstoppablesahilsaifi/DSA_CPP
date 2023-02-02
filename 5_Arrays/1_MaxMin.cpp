@@ -1,3 +1,54 @@
+/*
+How to initialize the entire array with any specific value.
+
+#include <stdio.h>
+
+int main(void)
+{
+    int n = 5;
+    int val = 1;
+
+    // declare array
+    int arr[n];
+
+    // initialize array
+    for (int i = 0; i < n; i++) {
+        arr[i] = val;
+    }
+
+    // rest of the code
+
+    return 0;
+}
+
+
+                or
+
+We can initialize the array with any value by using the fill_n command
+
+Example code:
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    int array[100];
+
+    //To initialize the array with value'1'.
+    fill_n(array, 100, 1);
+
+    //To check the array input (kewaal 5 hi kari h print)
+    for(int i = 0; i <= 5; i++){
+        cout << array[i] << endl;
+    }
+
+}
+
+Output would be 100 times 1.
+//This is one of the method and the 'for loop' can also be used
+but it is does not looks good and professional
+*/
+
 // // // Max number finder
 // #include <iostream>
 // #include <climits>
