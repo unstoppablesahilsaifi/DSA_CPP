@@ -15,19 +15,16 @@
 //     return 0;
 // }
 
-
 // a=2
 // b=3
 // OP= 8
 
 //--------------------------------------------------------------------
 
-
-// // Program to  count the  1's bit 
+// // Program to  count the  1's bit
 // #include <iostream>
 // #include <math.h>
 // using namespace std;
-
 
 // int bitConverter(int n){
 //     int i = 0;
@@ -48,13 +45,12 @@
 //         int digit = num%10;
 //         if(digit==1){
 //             ans = ans + digit;
-            
+
 //         }
 //         num=num/10;
 //     }
 //     return ans;
-    
-  
+
 //     return num;
 // }
 
@@ -93,3 +89,26 @@
 //     return 0;
 // }
 
+//--------------------------------------------------------------------------------
+// nth fibonacci number
+// 0 1 1 2 3 5 8 13
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 0;
+    int b = 1;
+
+    int n = 10;
+    cout << a << " " << b << " ";
+    for (int i = 0; i < n - 2; i++)
+    {
+        int c = a + b;
+        cout << c << " ";
+        a = b;
+        b = c;
+    }
+    return 0;
+}
