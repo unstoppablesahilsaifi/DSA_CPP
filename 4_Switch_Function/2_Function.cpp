@@ -14,11 +14,13 @@
 //     cout<<ans;
 //     return 0;
 // }
+
+
 // a=2
 // b=3
 // OP= 8
 
-
+//--------------------------------------------------------------------
 
 
 // // Program to  count the  1's bit 
@@ -64,3 +66,30 @@
 //     int answer = BitCounter(a) + BitCounter(b);
 //     cout<<answer;
 // }
+
+// 2nd approach for count bit
+
+// #include<iostream>
+// using namespace std;
+
+// int bitCounter(int n)
+// {
+//     int count=0;
+//     while(n!=0){
+//         if(n&1){
+//             count++;
+//         }
+//         n=n>>1;
+//     }
+//     return count;
+// }
+
+// int main()
+// {
+//     int a=2;
+//     int b=3;
+
+//     cout<<"Output for bits  "<<bitCounter(a) + bitCounter(b);
+//     return 0;
+// }
+
