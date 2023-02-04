@@ -34,6 +34,17 @@
 
 
 ///// Optimize Approach/////
+
+/*
+N size ka array h number contains 1 to N-1.
+suppose array h 5,1,2,3,4,2 ab OP hoga 2 kyuki 2 hi duplicate h 
+1st loop m saare array element k liye jisme 2 s 2 cancel ho jayga and 5,1,3,4 bchega.
+2nd loop 1 ki counting s chelega N-1 tak mtlb, 1,2,3,4,5 kyuki array size N-6 h mtlb 5 baar chlega
+jisme sab cancel ho jaynge and 2 bchega
+
+*/
+
+
 // #include <bits/stdc++.h> 
 // #include <bits/stdc++.h> 
 // int findDuplicate(vector<int> &arr, int n){
