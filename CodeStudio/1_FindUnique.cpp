@@ -1,3 +1,6 @@
+
+// array n=2m+1 h, means odd h kyuki 2 m kuch bhi multiply kro to even aayga and plus one krdo to odd ho jayga
+
 #include <iostream>
 using namespace std;
 
@@ -80,3 +83,28 @@ int main()
 //     cout << "The odd occurring element is  "<< findOdd(arr, n);
 //     return 0;
 // }
+
+
+/*
+Sample Input 1:
+1
+7
+2 3 1 6 3 6 2
+
+Sample Output 1:
+1
+
+-----------------------
+
+Sample Input 2:
+2
+5
+2 4 7 2 7
+9
+1 3 1 3 6 6 7 10 7
+
+
+Sample Output 2:
+4
+10
+*/
