@@ -1,5 +1,6 @@
 
 // array n=2m+1 h, means odd h kyuki 2 m kuch bhi multiply kro to even aayga and plus one krdo to odd ho jayga
+// array odd isliye h kyuki har number ka duplicate h per jo unique find krna h use milakr to odd ho jayga na
 
 #include <iostream>
 using namespace std;
