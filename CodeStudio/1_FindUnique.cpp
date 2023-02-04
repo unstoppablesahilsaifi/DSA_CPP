@@ -24,6 +24,14 @@ int uniqueFinder(int arr[], int n)
             {
                 j++;
             }
+
+            /*
+             Hmne ye j=0 s start and ye uper if ki condition kyu di??? 
+             kyuki suppose array h 2 3 1 6 3 6 2 ab isme  index 0 vale 2 ko usi s compare to krenge nhi isliye, khud ko
+             khud hi ki index s compare nhi krenge isliye j++ kiya ki bhai agar i or j same h to j ko badha dena.
+             => ab iski jrurat hi kyu pdii, kyuki bhai suppose kro i h 3 mtlb 6 per, to bhai har i k liye j(har  baar 0 s) to suru s hi 
+             compare krna pdega na, kya pta us i k compare m koi element usse pehle pdaa ho.
+            */
             count = 1;
             if (arr[i] == arr[j])
             {
