@@ -39,9 +39,11 @@
 // int findDuplicate(vector<int> &arr, int n){
 // 	// Write your code here.
 //      int ans=0;
+//      ye loop chlega index k according
 //     for(int i=0;i<arr.size();i++){
 //         ans=ans^arr[i];
 //     }
+//     ye loop chlega number k according mtlb values k acc
 //      for(int i=1;i<arr.size();i++){
 //         ans=ans^i;
 //      }
