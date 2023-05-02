@@ -7,6 +7,7 @@ int getPivot(int arr[], int n){
     int end = n-1;
     int mid = start +(end-start)/2;
     int ans;
+    // yha less than equal to isliye nhi kiya ki dry run krte time ek point per start or end same point per honge and start hi return krne h
 
     while(start<end){
         if(arr[mid]>=arr[0]){
@@ -14,6 +15,7 @@ int getPivot(int arr[], int n){
         }
     
         else 
+        //mid-1 isliye nhi kiya ki ho skta h ki mid hi pivot ho to mid-1 krne s array piche ho jayga.
         end =  mid;
         
         mid = start +(end-start)/2;
