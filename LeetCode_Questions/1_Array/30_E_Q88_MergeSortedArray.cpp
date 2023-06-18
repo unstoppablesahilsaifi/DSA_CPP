@@ -83,6 +83,8 @@ public:
                 j--; k--;
             }
         }
+
+        // In case nums2 k element kuch bach jaate h to vo nums1 k andar hi store ho, isliye below loop
         while(j>=0){
             nums1[k] = nums2[j];
             j--; k--;
