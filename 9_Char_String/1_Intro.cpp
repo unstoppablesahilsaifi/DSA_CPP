@@ -5,6 +5,8 @@ char toLowerCase(char ch) {
     if(ch >='a' && ch <='z')
         return ch;
     else{
+
+        // Suppose ch m D aaya the ch-'A' hua D-'A' to difference aaya 3, and 3+a krenge to aayga d, ho gya  convert
         char temp = ch - 'A' + 'a';
         return temp;
     }
