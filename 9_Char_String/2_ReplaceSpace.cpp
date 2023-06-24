@@ -20,3 +20,23 @@ string replaceSpaces(string &str){
 
 
 // jaha jaha space h vha per @40 daalna tha
+
+
+
+// Solution without taking temp
+
+QUES: Replace space in the original string....
+
+SOL:
+string replaceSpaces(string &str){
+	// Write your code here.
+    string s="@40";
+    for(int i=0;i<str.length();i++)
+    {
+        if(str[i]==' ')
+        {
+            str.replace(i,1,s);  
+        }
+    }
+    return str;
+}
