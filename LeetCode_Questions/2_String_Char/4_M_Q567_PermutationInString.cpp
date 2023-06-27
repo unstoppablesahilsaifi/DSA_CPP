@@ -23,7 +23,7 @@ public:
         int windowSize = s1.length();
         int count2[26] = {0};
         // Running for the first window
-        while (i < windowSize &&i < s2.length()) {
+        while (i < windowSize && i < s2.length()) {
             int index = s2[i] - 'a';
             count2[index]++;
             i++;
