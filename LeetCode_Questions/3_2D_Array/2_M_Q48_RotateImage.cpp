@@ -1,3 +1,13 @@
+/*
+
+2 Steps to rotate image
+
+Transpose the matrix
+Swap the columns
+
+*/
+
+
 class Solution {
 public:
     void rotate(vector<vector<int>>& matrix) {
