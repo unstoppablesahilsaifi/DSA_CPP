@@ -23,6 +23,14 @@ public:
         while(count < total) {
             
             //print starting row
+           /*
+           Ab niche vale loop m 1,2,3 print krna h, jisme start hoga startingcol s kyuki col ++ hoga  tabhi to 1,2,3 hoga ok
+           end hoga loop jab jhaa tak col end hoga mtlb ending col thik h
+           ab print kaise krna h ??    kya kya print hoga ?? samjh ye aaya ki pehli row print honi and while doing col++ ok
+           pehli row mtlb starting Row and col++ end tak  jayga mtlb ending col ok
+           ab jo in dono m row h use pehle daal do baaki baad m, row h hmari starting row that's why matrix[startingRow][index]
+           */
+
             for(int index = startingCol; count < total && index<=endingCol; index++) {
                 ans.push_back(matrix[startingRow][index]);
                 count++;
