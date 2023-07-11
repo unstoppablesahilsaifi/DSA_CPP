@@ -29,6 +29,9 @@ public:
            ab print kaise krna h ??    kya kya print hoga ?? samjh ye aaya ki pehli row print honi and while doing col++ ok
            pehli row mtlb starting Row and col++ end tak  jayga mtlb ending col ok
            ab jo in dono m row h use pehle daal do baaki baad m, row h hmari starting row that's why matrix[startingRow][index]
+
+
+           NOTE: ek cheej  hmesha same rhegi ya to col ya fir row uski hisab s row and col print krdena
            */
 
             for(int index = startingCol; count < total && index<=endingCol; index++) {
