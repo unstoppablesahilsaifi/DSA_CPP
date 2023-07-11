@@ -4,7 +4,7 @@ class Solution {
 private:
 bool isPrime(int n){
      bool checkPrime=1;
-        for(int i=2;i<n/2;i++){
+        for(int i=2;i<n;i++){
             if(n%i==0){
                 checkPrime=0;
             }
