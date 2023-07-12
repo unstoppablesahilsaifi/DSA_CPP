@@ -14,7 +14,7 @@ public:
         int mid = start + (end-start)/2;
         
         while(start<=end) {
-            
+            // mid ko size col size s divide kro to row ka index mil jayga, col milega % krne s
             int element = matrix[mid/col][mid%col];
             
             if(element == target) {
