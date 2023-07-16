@@ -43,9 +43,14 @@ int main () {
    int i = 3;
    int *t = &i;
    //cout <<  (*t)++ << endl;
+
+   // yha per actual value increment hogi
    *t = *t +1;
     cout << *t << endl;
     cout << " before t " << t << endl;
+
+    // yaha per *t m to actual value hogi but sirf t m i ka address h to t ko ++ krne per vo next ko point krega mtlb 4 byte +
+
     t = t + 1;
     cout << " after t " << t << endl;
 
