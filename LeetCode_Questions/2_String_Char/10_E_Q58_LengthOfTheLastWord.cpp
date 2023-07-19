@@ -49,3 +49,8 @@ This code essentially trims the input string s and calculates the length of the 
 ------------------
  In C++, string::npos is a static member constant of the std::string class.
 It represents a value that is used to indicate the absence or invalid position of a character or substring within a string.
+
+
+--------------------------------
+end - start + 1: This is the length of the substring to be extracted.
+It is calculated by subtracting the start index from the end index and adding 1 to include the character at the end index itself.
