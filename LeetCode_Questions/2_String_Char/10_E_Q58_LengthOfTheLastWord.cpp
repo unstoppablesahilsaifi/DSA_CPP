@@ -43,3 +43,9 @@ If a space is found, the function returns the length of the trimmed string s min
 
 This code essentially trims the input string s and calculates the length of the last word in the trimmed string.
 
+
+
+
+------------------
+ In C++, string::npos is a static member constant of the std::string class.
+It represents a value that is used to indicate the absence or invalid position of a character or substring within a string.
