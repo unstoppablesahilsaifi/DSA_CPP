@@ -18,7 +18,8 @@
 
  to ek formula banao arr[(i+k)%nums.size()]=arr[i];
  mtlb array ka index + k ki value ko mode n and usme array ki value daal do, yehi to hua h array ka index n-1 + ki value(3) and mode uska
- 
+
+ ye kehta h cyclic way m k place s shift krdo
 
  */
 
