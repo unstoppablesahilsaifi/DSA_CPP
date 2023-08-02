@@ -44,3 +44,30 @@ public:
         return ans;
     }
 };
+
+
+----------------------
+    Explaining Reversed  loop
+
+    for (int i = temp.size() - 1; i >= 0; i--) {
+    if (i != 0)
+        ans += temp[i] + " ";
+    else
+        ans += temp[i];
+}
+
+1.for (int i = temp.size() - 1; i >= 0; i--) { ... }: This loop iterates through the temp vector, starting from the last element (temp.size() - 1) and going down to the first element (0).
+
+2.if (i != 0): This condition checks whether the current iteration is not the last element of the vector.
+
+3. ans += temp[i] + " ";: If the current iteration is not the last element, this line adds the current word temp[i] to the ans string, followed by a space " ".
+   This space is used to separate words in the reversed string.
+
+4. else: If the current iteration is the last element of the vector (i.e., the first word), this block of code executes.
+
+5. ans += temp[i];: In this case, it adds only the current word temp[i] to the ans string without appending a space at the end.
+    This is to avoid adding an extra space after the last word in the reversed string.
+
+The purpose of this loop is to reverse the order of words from the temp vector and construct the ans string by concatenating the reversed words with spaces between them. The loop takes care to not add an extra space after the last word, ensuring the correct formatting of the reversed string.
+
+In summary, this loop plays a crucial role in reversing the words and formatting the final reversed string that is returned by the reverseWords function.
