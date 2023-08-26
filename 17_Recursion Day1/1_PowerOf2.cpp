@@ -1,0 +1,1 @@
+// Agar kisi badi problem ka solution depend krta h kisi same type ki choti problem per to ham recursion use krte h 
