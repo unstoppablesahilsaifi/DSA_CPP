@@ -7,7 +7,7 @@ using namespace std;
 
 int power(int n) {
 
-    //base case 
+    //base case (jha per rukna hota h usee base case kehte h )
     if(n == 0)
         return 1;
 
