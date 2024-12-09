@@ -19,7 +19,7 @@ string replaceSpaces(string &str){
 }
 
 
-// jaha jaha space h vha per @40 daalna tha
+// jaha jaha space h vha per @40 daalna thaa
 
 
 
