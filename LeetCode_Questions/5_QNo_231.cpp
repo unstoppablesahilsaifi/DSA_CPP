@@ -1,5 +1,32 @@
 // 231. Power of Two
 
+//Perfect Code
+
+/*
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+        if (n <= 0) {
+            return false; // Non-positive numbers cannot be powers of two
+        }
+
+        int count = 0;
+
+        // Count the number of set bits in `n`
+        while (n != 0) {
+            if (n & 1) { // Check the least significant bit
+                count++;
+            }
+            n = n >> 1; // Shift the number right by 1
+        }
+
+        // Return true if exactly one bit is set, false otherwise
+        return count == 1;
+    }
+};
+
+*/
+
 
 /*
 class Solution {
