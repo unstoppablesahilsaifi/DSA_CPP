@@ -1,5 +1,31 @@
 // 231. Power of Two
 
+
+/*
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+        int count = 0;
+
+        // Handle non-positive numbers
+        if (n <= 0) {
+            return false;
+        }
+
+        // Count the number of set bits
+        while (n != 0) {
+            count += (n & 1); // Check the least significant bit
+            n >>= 1;          // Shift the number right by 1
+        }
+
+        // If exactly one bit is set, it's a power of two
+        return count == 1;
+    }
+};
+
+*/
+
+
 // class Solution {
 // public:
 //     bool isPowerOfTwo(int n) {
