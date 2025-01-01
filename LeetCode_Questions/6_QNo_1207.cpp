@@ -37,3 +37,41 @@ public:
         return false; //return false if condition is wrong
     }
 };
+
+
+
+/*
+class Solution {
+public:
+    bool uniqueOccurrences(vector<int>& arr) {
+        // Step 1: Sort the array to group identical elements together
+        sort(arr.begin(), arr.end());
+        
+        // Step 2: Count the occurrences of each unique element
+        vector<int> counts; // To store the counts of each element
+        int n = arr.size();
+        int count = 1; // Start counting from the first element
+
+        for (int i = 1; i < n; ++i) {
+            if (arr[i] == arr[i - 1]) {
+                count++; // Increment count if the current element matches the previous one
+            } else {
+                counts.push_back(count); // Store the count for the previous element
+                count = 1;              // Reset count for the new element
+            }
+        }
+        counts.push_back(count); // Add the count for the last element
+
+        // Step 3: Check if all counts are unique
+        sort(counts.begin(), counts.end()); // Sort the counts
+        for (int i = 1; i < counts.size(); ++i) {
+            if (counts[i] == counts[i - 1]) {
+                return false; // Found duplicate counts, return false
+            }
+        }
+
+        return true; // All counts are unique, return true
+    }
+};
+
+*/
