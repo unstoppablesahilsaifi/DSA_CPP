@@ -13,6 +13,8 @@ Example 2:
 
 Input: arr = [1,2]
 Output: false
+
+https://www.youtube.com/watch?v=UQzYJAgp6I0&t=206s
 */
 
 class Solution {
