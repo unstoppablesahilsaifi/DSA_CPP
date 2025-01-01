@@ -42,6 +42,12 @@ suppose array h 5,1,2,3,4,2 ab OP hoga 2 kyuki 2 hi duplicate h
 2nd loop 1 ki counting s chelega N-1 tak mtlb, 1,2,3,4,5 kyuki array size N-6 h mtlb 5 baar chlega
 jisme sab cancel ho jaynge and 2 bchega
 
+
+
+NOTE: kisi number ko 0 k sath XOR krte h to same vhi number aata h
+a^0=a
+a^a=0
+
 */
 
 
