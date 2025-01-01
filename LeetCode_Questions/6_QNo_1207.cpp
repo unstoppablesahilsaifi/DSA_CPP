@@ -1,3 +1,75 @@
+/*
+A hashmap in C++ is an associative container that stores key-value pairs.
+Each element in a hashmap is stored as a pair: key (unique identifier) and value (data associated with the key).
+
+
+Duplicate Keys	Not allowed; keys must be unique.
+Allows Duplicate Values	Yes; multiple keys can map to the same value.
+
+
+Code example
+#include <unordered_map>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    unordered_map<string, int> hashmap;
+
+    // Adding key-value pairs
+    hashmap["apple"] = 3;
+    hashmap["banana"] = 5;
+    hashmap["orange"] = 2;
+
+    // Accessing values
+    cout << "Apples: " << hashmap["apple"] << endl;
+
+    return 0;
+}
+
+OP- Apples: 3
+
+Example: Counting Frequency of Elements
+Hashmaps are often used to count the frequency of elements in an array:
+
+#include <unordered_map>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    vector<int> arr = {1, 2, 2, 3, 1, 1, 3, 4};
+    unordered_map<int, int> frequency;
+
+    // Count occurrences
+    for (int num : arr) {
+        frequency[num]++;
+    }
+
+    // Display frequencies
+    for (auto& pair : frequency) {
+        cout << pair.first << ": " << pair.second << endl;
+    }
+
+    return 0;
+}
+Output:
+
+Copy code
+1: 3
+2: 2
+3: 2
+4: 1
+
+*/
+
+/*
+An unordered set in C++ is an associative container that stores unique elements in no particular order.
+Duplicate values are not allowed. Each element in the set is unique.
+
+*/
+
 
 /*
 Given an array of integers arr, return true if the number of occurrences of each value in the array is unique or false otherwise.
