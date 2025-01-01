@@ -60,3 +60,25 @@ jisme sab cancel ho jaynge and 2 bchega
 //      }
 //     return ans;
 // }
+
+
+/*
+
+The XOR operation outputs:
+- `1` if the bits are different.
+- `0` if the bits are the same.
+
+
+### **Truth Table for XOR**
+For two bits, \( A \) and \( B \), the XOR operation \( A \oplus B \) works as follows:
+
+| \( A \) | \( B \) | \( A \oplus B \) |
+|--------|--------|-----------------|
+| 0      | 0      | 0               |
+| 0      | 1      | 1               |
+| 1      | 0      | 1               |
+| 1      | 1      | 0               |
+
+---
+
+*/
