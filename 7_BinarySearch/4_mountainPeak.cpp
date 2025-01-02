@@ -63,6 +63,18 @@ int main()
 
 //Leetcode solution
 
+/*
+Why while(s<e) ??
+Jab s=e hoga to vo element peak element bhi ho skta h , to loop ruk jayga vha per
+
+agar hm while (s<=e) krte to kya hota?
+
+vo loop tab bhi chalta jab s=e k ho jata lekin agar hme s=e p hi element mil gya to extra iteration ki need nhi h na.
+
+
+*/
+
+
 class Solution {
 public:
     int peakIndexInMountainArray(vector<int>& arr) {
