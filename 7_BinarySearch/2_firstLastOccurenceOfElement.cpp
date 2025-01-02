@@ -1,3 +1,10 @@
+/*
+Why while (s <= e)?
+In the given code, the condition while (s <= e) is used instead of while (s < e) because the search needs to include the scenario where s == e. 
+
+If the target element is located at index s (or equivalently e since s == e), it must be checked. Using while (s < e) would skip this check because the loop exits before s and e can be equal.
+*/
+
 #include <iostream>
 
 using namespace std;
