@@ -10,6 +10,11 @@ No book is assigned to more than one student.
 
 The objective is to minimize the maximum number of pages assigned to any student. In other words, out of all possible allocations, find the arrangement where the student who receives the most pages still has the smallest possible maximum.
 */
+/*
+Books ko is tarike s allot krna tha ki kisi bhi student per jo maximun number of pages aaye vo sabhi possible solution ka 
+minumium ho.
+ho skat h ki allotment m student 2 ko 50 page padhne pde or kisi allotment m 30 page to jo jo minimum  vala h vo apna ansgwer h 
+*/
 
 
 #include <iostream>
