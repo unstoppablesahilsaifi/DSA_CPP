@@ -3,7 +3,7 @@ You are given a sorted array consisting of only integers where every element app
 
 Return the single element that appears only once.
 
-Your solution must run in O(log n) time and O(1) space.
+Your solution must run in O(log n) time and O(1) space..
 
  
 
