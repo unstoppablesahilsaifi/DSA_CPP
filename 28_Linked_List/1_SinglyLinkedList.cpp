@@ -50,8 +50,6 @@
 // * **LinkedList**: Use for frequent inserts/deletes (e.g., queues, undo operations).
 // * **Vector**: Use if you need a thread-safe dynamic array, though it's outdated (prefer `Collections.synchronizedList(new ArrayList<>())` now).
 
-
-// 
 #include<iostream>
 #include<map>
 using namespace std;
@@ -221,97 +219,6 @@ bool isCircularList(Node* head) {
     return false;
 }
 
-// ✅ Detect loop using map – visited nodes ko track karte hain
-bool detectLoop(Node* head) {
-
-    if(head == NULL)
-        return false;
-
-    map<Node*, bool> visited;
-    Node* temp = head;
-
-    while(temp !=NULL) {
-
-        // agar node pehle visit ho chuka hai to loop hai
-        if(visited[temp] == true) {
-            cout << "Present on element " << temp->data << endl;
-            return true;
-        }
-
-        // current node ko visited mark karo
-        visited[temp] = true;
-        temp = temp -> next;
-    }
-
-    return false;
-}
-
-// ✅ Floyd’s Algorithm – fast & slow pointer se loop detect karna
-Node* floydDetectLoop(Node* head) {
-
-    if(head == NULL)
-        return NULL;
-
-    Node* slow = head;
-    Node* fast = head;
-
-    while(slow != NULL && fast !=NULL) {
-        
-        fast = fast -> next;
-        if(fast != NULL) {
-            fast = fast -> next;
-        }
-
-        slow = slow -> next;
-
-        // agar fast aur slow mil jaayein to loop hai
-        if(slow == fast) {
-            cout << "present at " << slow -> data << endl;
-            return slow;
-        }
-    }
-
-    return NULL;
-}
-
-// ✅ Loop ka starting node find karna
-Node* getStartingNode(Node* head) {
-
-    if(head == NULL) 
-        return NULL;
-
-    // intersection point find karo
-    Node* intersection = floydDetectLoop(head);
-    Node* slow = head;
-
-    // slow aur intersection ko ek-ek step chalao
-    while(slow != intersection) {
-        slow = slow -> next;
-        intersection = intersection -> next;
-    }  
-
-    return slow; // yahi loop ka start hai
-}
-
-// ✅ Loop ko remove karna
-void removeLoop(Node* head) {
-
-    if( head == NULL)
-        return;
-
-    // loop ka starting node find karo
-    Node* startOfLoop = getStartingNode(head);
-    Node* temp = startOfLoop;
-
-    // last node find karo jo loop me jaa raha ho
-    while(temp -> next != startOfLoop) {
-        temp = temp -> next;
-    } 
-
-    // loop tod do
-    temp -> next = NULL;
-}
-
 int main() {
     
     // ek naya node banaya jiska data 10 hai
@@ -333,25 +240,9 @@ int main() {
     cout << "tail " << tail -> data << endl;
 
     // manually loop create kiya (tail ka next ko kisi node pe point kar diya)
-    tail -> next = head ->next;
+    tail -> next = head -> next;
 
-    // loop detect kar rahe hain
-    if(floydDetectLoop(head) != NULL) {
-        cout << "Cycle is present " << endl;
-    }
-    else
-    {
-        cout << "no cycle" << endl;
-    }
-
-    // loop start hone wali node find karna
-    Node* loop = getStartingNode(head);
-    cout << "loop starts at " << loop -> data  << endl;
-
-    // loop remove kar diya
-    removeLoop(head);
-
-    // ab list ko print kar diya
+    // ab loop detect ya remove ka code nahi hai, sirf print kar rahe hain
     print(head);
 
     /*
