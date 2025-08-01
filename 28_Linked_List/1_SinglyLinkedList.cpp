@@ -149,10 +149,10 @@ void insertAtPosition(Node* &tail, Node* & head, int position, int d) {
         return ;
     }
 
-    // beech me insert karna hai
+    // beech me insert karna hai, ek nai node banani hoti h jo insert krni h
     Node* nodeToInsert = new Node(d);
 
-    // naye node ka next existing node pe point kare
+    // naye node ka next existing node pe point kare, nodeToInsert usko point krega jisko temp point kr rha hoga.
     nodeToInsert -> next = temp -> next;
 
     // previous node ka next naye node pe point kare
@@ -227,6 +227,8 @@ int main() {
     // head aur tail dono usi node ko point kar rahe hain
     Node* head = node1; 
     Node* tail = node1;
+
+       insertAtHead(head, 5);  // 👈 Yeh line ab insertAtHead() ko test karegi
 
     // tail pe insert kar rahe hain
     insertAtTail(tail, 12);
