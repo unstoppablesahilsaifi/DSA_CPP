@@ -76,3 +76,6 @@ int main() {
 
     return 0;
 }
+
+
+// do pointer chalaye, ekk fast and ek slow, jab dono meet kr jaye mtlb loop h and nhi h
