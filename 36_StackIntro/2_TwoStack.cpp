@@ -1,4 +1,4 @@
-/* ठीक है, isko short m samjh lete hain 👇
+/*
 
 ### **Problem Summary**
 
