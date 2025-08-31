@@ -2,24 +2,32 @@
 #include <stack>
 using namespace std;
 
-// helper recursive function
+// 🔹 Helper function: recursively x ko stack ke bottom me daalna
 void solve(stack<int>& s, int x) {
-    // base case
+    //  Base case: agar stack empty hai, to wahi par x push karo
     if(s.empty()) {
+        cout << "Base case reached: stack empty, pushing " << x << endl;
         s.push(x);
         return;
     }
 
+    // 🔹 Step 1: Top element nikal lo
     int num = s.top();
+    cout << "Popped: " << num << endl;
     s.pop();
 
-    // recursive call
+    // 🔹 Step 2: Recursive call (ab chhote stack ke liye same kaam)
+    cout << "Calling recursion for remaining stack..." << endl;
     solve(s, x);
 
+    // 🔹 Step 3: Jaise hi recursion se return aaya, wapas top element ko push karo
+    cout << "Pushing back: " << num << endl;
     s.push(num);
 }
 
+// 🔹 Public function
 stack<int> pushAtBottom(stack<int>& myStack, int x) {
+    cout << "\n--- Inserting " << x << " at bottom ---\n";
     solve(myStack, x);
     return myStack;
 }
@@ -43,8 +51,8 @@ int main() {
 
     st = pushAtBottom(st, x);
 
-    // print stack (top to bottom)
-    cout << "Stack after insertion (top to bottom): ";
+    // 🔹 Print stack (top to bottom)
+    cout << "\nStack after insertion (top to bottom): ";
     while(!st.empty()) {
         cout << st.top() << " ";
         st.pop();
