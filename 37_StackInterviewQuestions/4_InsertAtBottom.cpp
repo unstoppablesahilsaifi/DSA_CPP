@@ -61,3 +61,48 @@ int main() {
 
     return 0;
 }
+
+
+/*#include <iostream>
+#include <stack>
+using namespace std;
+
+// Function to insert element at bottom without recursion
+void insertAtBottom(stack<int>& st, int x) {
+    stack<int> temp;
+
+    // Step 1: Move all elements to temp
+    while (!st.empty()) {
+        temp.push(st.top());
+        st.pop();
+    }
+
+    // Step 2: Push new element in original stack
+    st.push(x);
+
+    // Step 3: Move back elements from temp to original stack
+    while (!temp.empty()) {
+        st.push(temp.top());
+        temp.pop();
+    }
+}
+
+int main() {
+    stack<int> st;
+
+    st.push(10);
+    st.push(20);
+    st.push(30);
+
+    cout << "Original stack top: " << st.top() << endl;
+
+    insertAtBottom(st, 5);
+
+    cout << "Stack after inserting 5 at bottom:\n";
+    while (!st.empty()) {
+        cout << st.top() << " ";
+        st.pop();
+    }
+    return 0;
+}
+*/
