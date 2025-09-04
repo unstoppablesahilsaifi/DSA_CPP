@@ -137,3 +137,69 @@ int main()
 2       // n = 2 (Dusra test case, 2 log)
 0 1
 1 0 */
+
+
+
+/*Main samajh sakta hoon, yeh do checks thode confusing lag sakte hain. Chalo isko ek simple analogy se samajhte hain.
+
+Imagine ek party chal rahi hai aur aapko ek celebrity dhoondhna hai.
+
+**Celebrity ki 2 khaas baatein hoti hain:**
+
+1.  **Woh kisi ko nahi jaante.** (Doesn't know anyone).
+2.  **Sab unko jaante hain.** (Everyone knows them).
+
+Jo matrix `M` hai, usko hum `M[i][j]` se samjhenge, jiska matlab hai **`i` `j` ko jaanta hai**.
+
+-----
+
+### **Verification 1: "Main kisi ko nahi jaanta"**
+
+Yeh code ka pehla hissa hai: `Row Check`.
+
+```cpp
+// Verification 1: Row Check
+// Celebrity kisi ko nahi jaanta. Uski row mein sab zeros hone chahiye.
+int zeroCount = 0;
+for(int i=0; i<n; i++) {
+    if(M[candidate][i] == 0)
+        zeroCount++;
+}
+
+// Agar zeros ki count n ke barabar nahi hai, toh matlab wo kisi ko jaanta hai.
+// Isliye woh celebrity nahi hai.
+if(zeroCount != n) {
+    return -1;
+}
+```
+
+  * **`M[candidate][i]` ka matlab:** Hum potential celebrity (`candidate`) ki row ko check kar rahe hain. `i` yahan har doosre insaan ka index hai.
+  * **Logical Meaning:** Agar `M[candidate][i] == 1` hota, toh iska matlab hota ki `candidate` `i` ko jaanta hai. Lekin celebrity ko toh kisi ko nahi jaanna chahiye, isliye uski poori row `0` honi chahiye.
+  * **Code ka kaam:** Yeh loop **`candidate` ki poori row** mein ghoomta hai aur count karta hai ki kitne `0` hain.
+  * **Final Check:** Agar `zeroCount` `n` ke barabar nahi hai, toh iska matlab us row mein ek ya ek se zyada `1` hain. Agar ek bhi `1` hai, toh `candidate` ne kisi ko jaana, aur woh celebrity nahi ho sakta. Isliye hum `-1` return kar dete hain.
+
+-----
+
+### **Verification 2: "Sab mujhe jaante hain"**
+
+Yeh code ka doosra hissa hai: `Column Check`.
+
+```cpp
+// Verification 2: Column Check
+// Sab log celebrity ko jaante hain. Uski column mein n-1 ones hone chahiye.
+int oneCount = 0;
+for(int i=0; i<n; i++) {
+    // Hum M[candidate][candidate] ko check nahi karte, jo hamesha 0 hoga.
+    if(M[i][candidate] == 1)
+        oneCount++;
+}
+```
+
+  * **`M[i][candidate]` ka matlab:** Hum potential celebrity (`candidate`) ki column ko check kar rahe hain. `i` yahan har doosre insaan ka index hai.
+  * **Logical Meaning:** `M[i][candidate] == 1` ka matlab hai **`i` `candidate` ko jaanta hai**. Celebrity ki property hai ki sab log usko jaane, isliye uski poori column (`M[][candidate]`) mein `1`s hone chahiye (sivaaye khud ke).
+  * **Code ka kaam:** Yeh loop **`candidate` ki poori column** mein ghoomta hai aur count karta hai ki kitne `1` hain.
+  * **Final Check:** `n` log hain. `candidate` khud ko nahi jaanta, isliye `M[candidate][candidate]` hamesha `0` hoga. Baaki `n-1` log usko jaante hain, toh `n-1` `1`s hone chahiye. Agar `oneCount` `n-1` se kam hai, toh matlab sab usko nahi jaante aur woh celebrity nahi hai. Is case mein bhi, hum `-1` return kar dete hain.
+
+Ek image se aur clear ho jayega:
+
+Agar dono conditions (`zeroCount == n` **aur** `oneCount == n-1`) true hoti hain, toh `candidate` hi celebrity hai aur hum uska index return karte hain.*/
